@@ -42,6 +42,8 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "background_image"))
+        self.tableView.backgroundView = imageView
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

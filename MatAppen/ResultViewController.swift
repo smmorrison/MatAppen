@@ -15,34 +15,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var fatLabel: UILabel!
     @IBOutlet weak var proteinLabel: UILabel!
     @IBOutlet weak var carbohydratesLabel: UILabel!
+    @IBOutlet weak var healthValueLabel: UILabel!
     var food : Food?
-    
-    
-    @IBOutlet weak var apple: UILabel!
-    @IBOutlet weak var cake: UILabel!
-    @IBOutlet weak var pear: UILabel!
-    @IBOutlet weak var banana: UILabel!
-    @IBOutlet weak var taco: UILabel!
-    @IBOutlet weak var tomato: UILabel!
-    @IBOutlet weak var cherry: UILabel!
-    @IBOutlet weak var sushi: UILabel!
-    @IBOutlet weak var iceCream: UILabel!
-    @IBOutlet weak var eggplant: UILabel!
-    @IBOutlet weak var strawberry: UILabel!
-    @IBOutlet weak var bread: UILabel!
-    @IBOutlet weak var pineapple: UILabel!
-    @IBOutlet weak var coffee: UILabel!
-    @IBOutlet weak var burger: UILabel!
-    @IBOutlet weak var pizza: UILabel!
-    @IBOutlet weak var cheese: UILabel!
-    @IBOutlet weak var beer: UILabel!
-    @IBOutlet weak var choclate: UILabel!
-    @IBOutlet weak var hotdog: UILabel!
-    @IBOutlet weak var popcorn: UILabel!
-    @IBOutlet weak var chicken: UILabel!
-    @IBOutlet weak var orange: UILabel!
-    @IBOutlet weak var lemon: UILabel!
-    @IBOutlet weak var corn: UILabel!
     
     
     override func viewDidLoad() {
@@ -66,6 +40,7 @@ class ResultViewController: UIViewController {
             fatLabel.text = "Fett: \(fat)"
             proteinLabel.text = "Protein: \(protein)"
             carbohydratesLabel.text = "Kolhydrater: \(carbohydrates)"
+            healthValueLabel.text = "Nyttighetsvärde: \(fat * protein / 2)"
             NSLog("ResultView: Data set to views")
         } else {
             energyLabel.text = "Energivärde: Laddar..."
@@ -94,13 +69,32 @@ class ResultViewController: UIViewController {
      */
     
 }
+    
+   /*
 
+    var dynamicAnimator: UIDynamicAnimator!
+    var gravity: UIGravityBehavior!
+    var collision: UICollisionBehavior!
+    var subview: UIView
+    
+    view.addSubview(subview)
+    
+    
+    func loadResultView() {
+        
+        dynamicAnimator = UIDynamicAnimator(referenceView: subview)
+        gravity = UIGravityBehavior(items: [banana, chicken, tomato, cake, apple])
+        dynamicAnimator.addBehavior(gravity)
+        
+        collision = UICollisionBehavior(items: [banana, chicken, tomato, cake, apple])
+        dynamicAnimator.addBehavior(collision)
+        collision.translatesReferenceBoundsIntoBoundary = true
+        
+    }
+    
+    
+}*/
 
-class ResultViewAnimation : UIImageView {
-    
-    
-    
-}
 
 
 
