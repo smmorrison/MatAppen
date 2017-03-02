@@ -24,9 +24,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-Dk-jSC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MatAppen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEc-dm-t6h">
-                                <rect key="frame" x="1" y="301" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MatAppen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEc-dm-t6h">
+                                <rect key="frame" x="0.0" y="301" width="374" height="65"/>
                                 <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="55"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -38,6 +37,8 @@
                             <constraint firstAttribute="trailing" secondItem="Q4W-Dk-jSC" secondAttribute="trailing" id="Uee-y9-1eP"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Q4W-Dk-jSC" secondAttribute="bottom" id="ghK-bq-yqc"/>
                             <constraint firstItem="Q4W-Dk-jSC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="iVd-Lj-onv"/>
+                            <constraint firstItem="qEc-dm-t6h" firstAttribute="centerY" secondItem="Q4W-Dk-jSC" secondAttribute="centerY" id="jsb-Re-c9h"/>
+                            <constraint firstItem="qEc-dm-t6h" firstAttribute="centerX" secondItem="Q4W-Dk-jSC" secondAttribute="centerX" id="lJ9-jG-EbF"/>
                         </constraints>
                     </view>
                 </viewController>

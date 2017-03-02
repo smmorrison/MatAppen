@@ -13,11 +13,13 @@ let apiHelper = ApiHelper()
 
 class ViewController: UIViewController {
     @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var searchLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tvc : TableViewController = segue.destination as! TableViewController
         if let searchWord = searchField.text {

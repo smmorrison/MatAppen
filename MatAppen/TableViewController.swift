@@ -42,9 +42,9 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let imageView = UIImageView(image: #imageLiteral(resourceName: "background_image"))
         self.tableView.backgroundView = imageView
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -66,6 +66,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.searchItemTitle.text = data[indexPath.row].name
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.7)
         
         if let energy = data[indexPath.row].energyValue {
             cell.searchItemEnergyValue.text = "\(energy) kcal"

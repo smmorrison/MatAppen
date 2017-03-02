@@ -22,6 +22,11 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: [],
+                       animations: {
+                        self.healthValueLabel.center.x += self.view.bounds.width
+        }, completion: nil)
     }
     
     //  Setting all views with data from Food-object. Sending new API-request if any values are missing.
