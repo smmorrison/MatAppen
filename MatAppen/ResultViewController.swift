@@ -18,15 +18,25 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var healthValueLabel: UILabel!
     var food : Food?
     
+    @IBOutlet weak var icecream: UIImageView!
+    @IBOutlet weak var burger: UIImageView!
+    var dynamicAnimator: UIDynamicAnimator!
+    var gravity: UIGravityBehavior!
+    var items: [UIImageView]!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         
         UIView.animate(withDuration: 0.5, delay: 0.4, options: [],
-                       animations: {
-                        self.healthValueLabel.center.x += self.view.bounds.width
-        }, completion: nil)
+                       animations: {self.healthValueLabel.center.x += self.view.bounds.width}, completion: nil)
+        
+        dynamicAnimator = UIDynamicAnimator(referenceView: view)
+        items = [icecream, burger]
+        gravity = UIGravityBehavior(items: [icecream, burger])
+        dynamicAnimator.addBehavior(gravity)
+
     }
     
     //  Setting all views with data from Food-object. Sending new API-request if any values are missing.
@@ -63,56 +73,5 @@ class ResultViewController: UIViewController {
         
     }
     
-    
-    /*
-     // MARK: - Navigation
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
     
-   /*
-
-    var dynamicAnimator: UIDynamicAnimator!
-    var gravity: UIGravityBehavior!
-    var collision: UICollisionBehavior!
-    var subview: UIView
-    
-    view.addSubview(subview)
-    
-    
-    func loadResultView() {
-        
-        dynamicAnimator = UIDynamicAnimator(referenceView: subview)
-        gravity = UIGravityBehavior(items: [banana, chicken, tomato, cake, apple])
-        dynamicAnimator.addBehavior(gravity)
-        
-        collision = UICollisionBehavior(items: [banana, chicken, tomato, cake, apple])
-        dynamicAnimator.addBehavior(collision)
-        collision.translatesReferenceBoundsIntoBoundary = true
-        
-    }
-    
-    
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

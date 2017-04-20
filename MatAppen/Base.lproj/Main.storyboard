@@ -104,17 +104,17 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4cI-lh-rBg" id="4bm-qI-wna">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkc-1f-DUt">
-                                            <rect key="frame" x="8" y="8" width="310.66666666666669" height="17"/>
+                                            <rect key="frame" x="8" y="8" width="311" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kcal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-kk-5gY">
-                                            <rect key="frame" x="323.33333333333326" y="8" width="82.666666666666686" height="17"/>
+                                            <rect key="frame" x="323" y="8" width="83" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -216,6 +216,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iceCream" translatesAutoresizingMaskIntoConstraints="NO" id="GY3-CA-L4m">
+                                <rect key="frame" x="191" y="259" width="72" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-QW-LoM" userLabel="burger">
+                                <rect key="frame" x="263" y="259" width="72" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -245,10 +253,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="burger" destination="T3L-QW-LoM" id="YGm-cN-gU4"/>
                         <outlet property="carbohydratesLabel" destination="FIt-Mf-m6W" id="tHC-td-FtZ"/>
                         <outlet property="energyLabel" destination="kh0-bU-XtP" id="LiF-67-SU7"/>
                         <outlet property="fatLabel" destination="mo7-i7-LoD" id="XAV-VB-lvx"/>
                         <outlet property="healthValueLabel" destination="3Og-44-aid" id="bAi-Q3-y0C"/>
+                        <outlet property="icecream" destination="GY3-CA-L4m" id="65C-ZX-sXb"/>
                         <outlet property="proteinLabel" destination="6wM-W1-JgB" id="Vdd-YX-zFb"/>
                         <outlet property="resultTitleLabel" destination="72K-8N-Pow" id="BRG-xr-stC"/>
                     </connections>
@@ -278,5 +288,7 @@
     </scenes>
     <resources>
         <image name="background_image" width="564" height="846"/>
+        <image name="burger" width="64" height="64"/>
+        <image name="iceCream" width="102" height="102"/>
     </resources>
 </document>
